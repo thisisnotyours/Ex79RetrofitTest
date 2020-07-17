@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.suek.ex79retrofittest"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //Retrofit 이 자바 1.8버전(==8버전)을 사용할 수 있도록 [옵션설정]하기.. -->> 안하면 에러남!!!!
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+    //Retrofit2 Library 추가하기 [단, Retrofit2 는 자바 1.8버전을 사용할 수 있도록 옵션설정 필요!!]
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    //레트로핏은 GSON 라이브러리와 같이 사용
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //GSON 을 이용해서 응답결과를 자바의 객체로 자동으로 변환하도록 할 때 사용 -->GSON 대신에..new 안해도됨
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //String 으로 응답결과를 받고 싶다면..
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+
+}

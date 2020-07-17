@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESULT"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:padding="8dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GET json from Network"
+        android:textAllCaps="false"
+        android:onClick="clickBtn"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GET json from Net by Path"
+        android:textAllCaps="false"
+        android:onClick="clickBtn2"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GET Method"
+        android:textAllCaps="false"
+        android:onClick="clickBtn3"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Method by Path"
+        android:textAllCaps="false"
+        android:onClick="clickBtn4"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Method by Map"
+        android:textAllCaps="false"
+        android:onClick="clickBtn5"/>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post Method by Members"
+        android:textAllCaps="false"
+        android:onClick="clickBtn7"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get JsonArray"
+        android:textAllCaps="false"
+        android:onClick="clickBtn8"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Url Test"
+        android:textAllCaps="false"
+        android:onClick="clickBtn9"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Json String"
+        android:textAllCaps="false"
+        android:onClick="clickBtn10"/>
+
+
+
+</LinearLayout>
